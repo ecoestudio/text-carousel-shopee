@@ -1,0 +1,230 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolling Text Carousel</title>
+<style>
+  .carousel {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+  }
+
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-item {
+    flex: 0 0 5%; /* Adjusted for 3 items at once */
+    text-align: center; /* Center text, optional */
+    padding: 0px; /* Padding for text */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    margin: 0 5px; /* Reduced spacing between items */
+    height: 300px; /* Example height, adjust based on your content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+  }
+
+  /* Additional styles for formatting the content */
+  .item-title, .item-rating, .item-date, .item-review {
+    white-space: pre-wrap; /* Allows text to wrap */
+    overflow-wrap: break-word; /* Ensures long words can break and wrap to the next line */
+  }
+
+  .item-review {
+    font-size: 16px;
+    color: #333;
+    max-width: 200px; /* Adjust based on your font size to approximate 20 characters per line */
+    margin: 0 auto; /* Center in the carousel item */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10; /* Limit to three lines */
+    -webkit-box-orient: vertical;
+  }
+</style>
+
+</head>
+<body>
+
+<div id="textCarousel" class="carousel">
+  <div class="carousel-container">
+    <!-- Example Item -->
+   <div class="carousel-item">
+    <div class="item-title">abnormal66</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-11-21 22:07</div>
+    <div class="item-review">非常棒的團隊，不僅速度快的沒話說。連客戶的需求都依序幫忙打理好。售後也是沒得說，溝通也是簡單明瞭，如果未來有機會的話，還會再次與其團隊合作的!</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">lingowang0430</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-01-12 21:33</div>
+    <div class="item-review">完全是蝦皮程式代做成品做最快最完整的店家！而且有問題都能耐心跟我討論完再修改，超級無敵推薦，賣家人超好</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">azazaz1001001</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-02-27 23:43</div>
+    <div class="item-review">能仔細理解我想要的東西  具備完善的溝通能力 以及完成作品的專業能力</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">ryuxhiro</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-02-01 01:01</div>
+    <div class="item-review">這應該是蝦皮唯一能幫我解決問題的賣家了 非常專業！ 而且回覆的速度非常快 也很用心在處理我的需求 值得推薦的好賣家👍</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">teacher1234</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-10-16 19:12</div>
+    <div class="item-review">非常棒的團隊，一開始會跟客戶詳細討論、確認需求，對於很多疑問也都會耐心回答。 做的過程中，如果有遇到什麼狀況，也都會即時告訴客戶，並給予很多建議，完成速度也是非常快。 以後我要是還有需求，絕對還會回來諮詢～</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">michelle891014</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-02-08 14:32</div>
+    <div class="item-review">再次購買，效率與CP值都極佳！</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">jenny87625</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-04-30 09:50</div>
+    <div class="item-review">交貨速度超快！ 下午下單、當天就交貨了，品質又好～ 值得推薦給大家的好賣家</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">pinqqhua</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2022-04-18 15:15</div>
+    <div class="item-review">賣家非常的專業，可以非常迅速的把程式完成，就算題目有些不清楚，賣家都可以，用自身的經驗幫忙推估題目內容和結果，非常推薦給有程式需求和想要增進自身能力的人，若往後有需求也是首選的合作對象。</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">savior3q</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-12-19 22:27</div>
+    <div class="item-review">成品非常優秀，如有代寫程式的需求找他們最專業的就對了</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">pignest_store</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-03-02 16:39</div>
+    <div class="item-review">短時間內就能做到我們提到的要求，品質也很棒。</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">rain1230060</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2022-06-13 15:45</div>
+    <div class="item-review">出貨速度非常快，人也很好 非常好溝通，有需求的可以找他幫忙。</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">sophie052588</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-06-04 22:07</div>
+    <div class="item-review">出貨速度超級快也非常專業，用心回答問題並給予一些解決辦法，服務很好！</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">x21345</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-06-11 12:07</div>
+    <div class="item-review">出貨速度極快且專業度高，事前還會跟你先確認細節，賣家超讚</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">lingowang0430</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-01-12 21:35</div>
+    <div class="item-review">今天下單今天就收到！速度超級快而且成品很完整，真的超級推薦！</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">pignest_store</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-03-02 16:37</div>
+    <div class="item-review">非常優質的賣家，提到的需求都有達成，諮詢期間也很有耐心。</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">kao850614</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2022-05-24 17:10</div>
+    <div class="item-review">賣家會仔細聽買家的需求，也會和買家溝通！服務態度佳！給五顆星評價！！！</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">chenglo0121</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2022-07-26 09:55</div>
+    <div class="item-review">價格合理，交付迅速，從溝通需求到完成不到一天，非常愉快的合作經驗！</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">michelle891014</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-07-23 13:53</div>
+    <div class="item-review">專員密切討論、實作速度快，且符合要求👍🏻</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">ascorpios</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-04-22 02:42</div>
+    <div class="item-review">賣家非常的專業 教學方面十分認真 值得推薦</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">lingowang0430</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2024-01-11 20:42</div>
+    <div class="item-review">店家很耐心幫我解決問題，而且速度超快，超級推</div>
+</div>
+<div class="carousel-item">
+    <div class="item-title">keroro33329913</div>
+    <div class="item-rating">★★★★★</div>
+    <div class="item-date">2023-10-13 23:27</div>
+    <div class="item-review">老闆速度真的超級快！而且做的很好</div>
+</div>
+
+
+
+    <!-- Add more items as needed -->
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel-container');
+  let items = document.querySelectorAll('.carousel-item');
+  const itemWidth = items[0].offsetWidth; // Get the width of a single item
+  const shiftWidth = itemWidth/5; // Shift width equals one item's width
+  let currentIndex = 0;
+
+  // Clone all items for seamless cycling
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    carousel.appendChild(clone);
+  });
+
+  // Extend the carousel width to fit all items and clones
+  const totalItems = document.querySelectorAll('.carousel-container .carousel-item').length;
+  carousel.style.width = `${totalItems * itemWidth}px`;
+
+  function rollItems() {
+    currentIndex = (currentIndex + 1) % totalItems; // Cycle through items
+    const moveDistance = -(shiftWidth * currentIndex);
+
+    // Enable transition for sliding effect
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = `translateX(${moveDistance}px)`;
+
+    // After completing the cycle, instantly reset to the start without transition
+    if (currentIndex === totalItems / 2 - 1) {
+      setTimeout(() => {
+        carousel.style.transition = 'none'; // Disable transition for instant reset
+        carousel.style.transform = 'translateX(0)'; // Reset position
+        currentIndex = 0; // Reset index for the next cycle
+      }, 500); // Timeout matches the transition duration
+    }
+  }
+
+  // Start rolling items every 5 seconds
+  setInterval(rollItems, 2000);
+});
+</script>
+
+</body>
+</html>
